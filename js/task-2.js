@@ -6,7 +6,11 @@
 //  у яких є друг з іменем friendName. Друзі кожного користувача зберігаються у властивості friends.
 //   Якщо користувачів, у яких є такий других немає, то функція має повернути порожній масив.
 
-const allUsers = [
+
+const getUsersWithFriend = (users, friendName) =>
+  users.filter(user => user.friends.includes(friendName));
+
+  const allUsers = [
     {
       name: "Moore Hensley",
       friends: ["Sharron Pace"]
@@ -36,8 +40,6 @@ const allUsers = [
       friends: ["Goldie Gentry", "Briana Decker"]
     }
   ];
-
-  
   
   console.log(getUsersWithFriend(allUsers, "Briana Decker")); 
   // [
